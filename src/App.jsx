@@ -1,11 +1,36 @@
 import { useState } from 'react';
+import FlashcardList from './FlashcardList';
+import './app.css'
 
 function App() {
-
+const[flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
 
   return (
-    <h1>Hello World</h1>
+    <FlashcardList flashcards={flashcards} />
      );
 }
 
+const SAMPLE_FLASHCARDS = [
+  {id: 1,
+    question: 'What is 2+2?',
+    answer: '4',
+    options:[
+      '2',
+      '3',
+      '4',
+      '5'
+    ]
+  },
+  {id: 2,
+    question: 'Hom many seasons in Latvia?',
+    answer: '4',
+    options:[
+      '2',
+      '3',
+      '4',
+      '5'
+    ]
+
+  }
+]
 export default App;
